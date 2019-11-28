@@ -9,13 +9,16 @@ import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 import java.util.List;
 
-@Api(tags = "PmsBrandController", description = "商品品牌管理")
+@Api(value = "PmsBrandController | 商品品牌管理")
+//@Controller
 @RestController
+//@RequestMapping("/brand")
 public class PmsBrandController {
     @Autowired
     private PmsBrandService demoService;

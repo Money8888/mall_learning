@@ -16,13 +16,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @Configuration
 @EnableSwagger2
 public class Swagger2Config {
-    private ApiInfo apiInfo(){
-        return new ApiInfoBuilder()
-                .title("SwaggerUI演示")
-                .description("mall_brand")
-                .version("1.0")
-                .build();
-    }
     @Bean
     public Docket createRestApi(){
         return new Docket(DocumentationType.SWAGGER_2)
@@ -30,6 +23,13 @@ public class Swagger2Config {
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.learning.mall.controller"))
                 .paths(PathSelectors.any())
+                .build();
+    }
+    private ApiInfo apiInfo(){
+        return new ApiInfoBuilder()
+                .title("SwaggerUI演示")
+                .description("mall_brand")
+                .version("1.0")
                 .build();
     }
 }
