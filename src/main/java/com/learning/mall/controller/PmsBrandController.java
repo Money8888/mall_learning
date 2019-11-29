@@ -16,9 +16,9 @@ import javax.annotation.Resource;
 import java.util.List;
 
 @Api(value = "PmsBrandController | 商品品牌管理")
-//@Controller
-@RestController
-//@RequestMapping("/brand")
+@Controller
+//@RestController
+@RequestMapping("/brand")
 public class PmsBrandController {
     @Autowired
     private PmsBrandService demoService;
